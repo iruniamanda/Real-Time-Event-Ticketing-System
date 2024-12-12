@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Vendor Dashboard</h1>
+
+  <form>
+    <div class="controls">
+      <button type="button" class="start-btn" (click)="onStart()">Start</button>
+      <button type="button" class="stop-btn" (click)="onStop()">Stop</button>
+      <button type="button" class="back-btn" [routerLink]="'/systemconfig'">Back</button>
+
+    </div>
+
+    <h2>Logs</h2>
+    <div class="logs">
+      <!-- Display logs dynamically -->
+      <ul>
+        <li *ngFor="let log of logs">{{ log }}</li>
+      </ul>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,6 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/gradient-minimalist-background_23-2149974334.jpg");
+  background-size: cover; /* Or 'contain' */
+  background-repeat: no-repeat;
+  /*opacity: 0.5; /* Set opacity to 50% for the body */
+}

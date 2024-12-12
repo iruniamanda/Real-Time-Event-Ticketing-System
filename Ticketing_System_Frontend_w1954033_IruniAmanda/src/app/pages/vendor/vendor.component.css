@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  color: white;
+  padding: 20px;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Controls section styling */
+.controls {
+  display: flex;
+  justify-content: space-between;  /* This will space out the buttons */
+  margin-bottom: 100px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Start button styling */
+.start-btn {
+  background-color: green;
+  color: white;
+  order: 1;  /* Ensures the start button is on the left */
+}
+
+/* Stop button styling */
+.stop-btn {
+  background-color: red;
+  color: white;
+  order: 3;  /* Ensures the stop button is on the right */
+}
+/*Click button*/
+.back-btn {
+  background-color: purple;
+  color: white;
+  order: 3;  /* Ensures the stop button is on the right */
+}
+
+/* Configurations and Execution buttons styling */
+.config-btn, .exec-btn {
+  background-color: #eee;
+  color: black;
+  border: 1px solid #ccc;
+  order: 2;  /* Centers the config and exec buttons */
+}
+
+/* Logs section styling */
+h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.logs {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 500px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Adding hover effects for buttons */
+button:hover {
+  opacity: 0.9;
+}

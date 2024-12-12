@@ -1,0 +1,36 @@
+<div class="system-container">
+  <h1>Welcome to the RealTime Ticketing  System</h1>
+  <form>
+    <div>
+      <label for="totalTickets">Total Number of Tickets:</label>
+      <input type="totalTickets" id="totalTickets" [(ngModel)]="loginObj.totalTicket" name="totalTickets" required>
+    </div>
+    <div>
+      <label for="ticketReleaseRate">Ticket Release Rate:</label>
+      <input type="ticketReleaseRate" id="ticketReleaseRate"  [(ngModel)]="loginObj.ticketReleaseRate" name="ticketReleaseRate" required>
+    </div>
+    <div>
+      <label for="customerRetrievalRate">Customer Retrieval Rate:</label>
+      <input type="customerRetrievalRate" id="customerRetrievalRate"  [(ngModel)]="loginObj.customerRetrievalRate"  name="customerRetrievalRate" required>
+    </div>
+    <div>
+      <label for="maxTicketCapacity">Maximum Ticket Capacity:</label>
+      <input type="maxTicketCapacity" id="maxTicketCapacity" [(ngModel)]="loginObj.maxTicketCapacity"  name="maxTicketCapacity" required>
+    </div>
+    <div>
+      <label for="vendorId">Vendor Id:</label>
+      <input type="vendorId" id="vendorId" [(ngModel)]="loginObj.vendorId"  name="vendorId" required>
+    </div>
+    <div>
+    <label for="vendorCount">Vendor Count:</label>
+    <input type="vendorCount" id="vendorCount" [(ngModel)]="loginObj.vendorCount"  name="vendorCount" required>
+  </div>
+    <div>
+      <label for="customerCount">Vendor Count:</label>
+      <input type="customerCount" id="customerCount" [(ngModel)]="loginObj.customerCount"  name="customerCount" required>
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit()" >Submit</button>
+    </div>
+  </form>
+</div>

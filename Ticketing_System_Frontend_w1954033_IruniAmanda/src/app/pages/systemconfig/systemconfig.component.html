@@ -1,0 +1,69 @@
+<div class="system-container">
+  <h1>Welcome to the RealTime Ticketing System</h1>
+  <form #ticketForm="ngForm">
+    <div>
+      <label for="totalTickets">Total Number of Tickets:</label>
+      <input type="number" id="totalTickets" [(ngModel)]="loginObj.totalTickets" name="totalTickets" required #totalTickets="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="totalTickets.invalid && totalTickets.touched" class="error-message">
+        Total Tickets must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="ticketReleaseRate">Ticket Release Rate:</label>
+      <input type="number" id="ticketReleaseRate" [(ngModel)]="loginObj.ticketReleaseRate" name="ticketReleaseRate" required #ticketReleaseRate="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="ticketReleaseRate.invalid && ticketReleaseRate.touched" class="error-message">
+        Ticket Release Rate must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="customerRetrievalRate">Customer Retrieval Rate:</label>
+      <input type="number" id="customerRetrievalRate" [(ngModel)]="loginObj.customerRetrievalRate" name="customerRetrievalRate" required #customerRetrievalRate="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="customerRetrievalRate.invalid && customerRetrievalRate.touched" class="error-message">
+        Customer Retrieval Rate must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="maxTicketCapacity">Maximum Ticket Capacity:</label>
+      <input type="number" id="maxTicketCapacity" [(ngModel)]="loginObj.maxCapacity" name="maxTicketCapacity" required #maxTicketCapacity="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="maxTicketCapacity.invalid && maxTicketCapacity.touched" class="error-message">
+        Maximum Ticket Capacity must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="vendorId">Vendor Id:</label>
+      <input type="text" id="vendorId" [(ngModel)]="loginObj.vendorId" name="vendorId" required #vendorId="ngModel">
+      <div *ngIf="vendorId.invalid && vendorId.touched" class="error-message">
+        Vendor Id cannot be empty.
+      </div>
+    </div>
+
+    <div>
+      <label for="vendorCount">Vendor Count:</label>
+      <input type="number" id="vendorCount" [(ngModel)]="loginObj.vendorCount" name="vendorCount" required #vendorCount="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="vendorCount.invalid && vendorCount.touched" class="error-message">
+        Vendor Count must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="customerCount">Customer Count:</label>
+      <input type="number" id="customerCount" [(ngModel)]="loginObj.customerCount" name="customerCount" required #customerCount="ngModel" min="1" pattern="^[0-9]+$">
+      <div *ngIf="customerCount.invalid && customerCount.touched" class="error-message">
+        Customer Count must be a valid integer greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="ticketForm.invalid" (click)="isUpdating ? onUpdate() : onSubmit()">Submit</button>
+    </div>
+
+    <div>
+      <button type="button" class="vendor-btn" [routerLink]="'/vendor'">Vendor</button>
+      <button type="button" class="customer-btn" [routerLink]="'/customer'">Customer</button>
+    </div>
+  </form>
+</div>
