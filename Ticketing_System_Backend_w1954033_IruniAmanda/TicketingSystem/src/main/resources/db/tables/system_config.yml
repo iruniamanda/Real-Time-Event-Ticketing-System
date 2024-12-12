@@ -1,0 +1,43 @@
+#Added By Iruni
+
+databaseChangeLog:
+  -changeset:
+    id: 1
+    author: Iruni
+    changes:
+      -createTable:
+        tableName: SystemConfig
+        columns:
+          - column:
+              name: id
+              type: bigint
+              constraints:
+              primaryKey: true
+              nullable: false
+          - column:
+              name: total_tickets
+              type: int
+              constraints:
+              nullable: false
+          - column:
+              name: max_capacity
+              type: int
+              constraints:
+              nullable: false
+          - column:
+              name: ticket_release_rate
+              type: int
+              constraints:
+              nullable: false
+          - column:
+              name: customer_retrieval_rate
+              type: int
+              constraints:
+              nullable: false
+          - column:
+              name: vendor_id
+              type: int
+              constraints:
+              nullable: false
+
+

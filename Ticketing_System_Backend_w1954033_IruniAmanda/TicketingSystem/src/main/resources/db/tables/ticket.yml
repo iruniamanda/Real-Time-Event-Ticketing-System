@@ -1,0 +1,38 @@
+#Added By Iruni
+
+databaseChangeLog:
+  -changeset:
+    id: 1
+    author: Iruni
+    changes:
+      -createTable:
+        tableName: Ticket
+        columns:
+          - column:
+              name: id
+              type: bigint
+              constraints:
+              primaryKey: true
+              nullable: false
+          - column:
+              name: event_id
+              type: BIGINT
+              constraints:
+              nullable: false
+              foreignKeyName: fk_event
+              references: event(id)
+          - column:
+              name: price
+              type: decimal(35,2)
+              constraints:
+              nullable: false
+          - column:
+              name: status
+              type: VARCHAR(50)
+              constraints:
+              nullable: false
+          - column:
+              name: description(600)
+              type: VARCHAR
+              constraints:
+              nullable: true

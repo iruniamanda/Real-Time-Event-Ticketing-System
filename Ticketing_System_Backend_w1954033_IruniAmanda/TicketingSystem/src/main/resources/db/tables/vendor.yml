@@ -1,0 +1,60 @@
+#Added By Iruni
+
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Iruni
+      changes:
+        -createTable:
+          tableName: vendor
+          columns:
+            - column:
+                name: id
+                type: bigint
+                constraints:
+                primaryKey: true
+                nullable: false
+            - column:
+                name: first_name
+                type: VARCHAR(30)
+                constraints:
+                  nullable: true
+            - column:
+                name: last_name
+                type: VARCHAR(30)
+                constraints:
+                  nullable: true
+            - column:
+                name: user_name
+                type: VARCHAR(30)
+                constraints:
+                  nullable: false
+            - column:
+                name: email
+                type: VARCHAR(50)
+                constraints:
+                  nullable: false
+            - column:
+                name: address
+                type: VARCHAR(50)
+                constraints:
+                  nullable: true
+            - column:
+                name: mobile_no
+                type: bigint(10)
+                constraints:
+                  nullable: true
+            - column:
+                name: password
+                type: VARCHAR(20)
+                constraints:
+                  nullable: false
+
+
+
+
+
+
+
+
+

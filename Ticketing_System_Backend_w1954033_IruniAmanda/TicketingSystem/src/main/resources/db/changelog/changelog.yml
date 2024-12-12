@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: db/tables/user.yml
+  - include:
+      file: db/tables/system_config.yml
+  - include:
+      file: db/tables/event.yml
+  - include:
+      file: db/tables/ticket.yml
+
+
+

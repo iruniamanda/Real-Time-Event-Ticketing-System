@@ -1,0 +1,66 @@
+#Added By Iruni
+
+databaseChangeLog:
+  -changeset:
+    id: 1
+    author: Iruni
+    changes:
+      -createTable:
+        tableName: Event
+        columns:
+          - column:
+              name: id
+              type: bigint
+              constraints:
+              primaryKey: true
+              nullable: false
+          - column:
+              name: event_name
+              type: VARCHAR(200)
+              constraints:
+              nullable: false
+          - column:
+              name: event_type(200)
+              type: VARCHAR
+              constraints:
+              nullable: false
+          - column:
+              name: event_status(50)
+              type: VARCHAR
+              constraints:
+              nullable: false
+          - column:
+              name: description(600)
+              type: VARCHAR
+              constraints:
+              nullable: true
+          - column:
+              name: created_user(200)
+              type: VARCHAR
+              constraints:
+              nullable: false
+          - column:
+              name: created_date
+              type: TIMESTAMP
+              constraints:
+              nullable: false
+          - column:
+              name: start_date
+              type: VARCHAR
+              constraints:
+              nullable: true
+          - column:
+              name: end_date
+              type: VARCHAR
+              constraints:
+              nullable: true
+          - column:
+              name: modified_user(200)
+              type: VARCHAR
+              constraints:
+              nullable: false
+          - column:
+              name: modified_date
+              type: TIMESTAMP
+              constraints:
+              nullable: false

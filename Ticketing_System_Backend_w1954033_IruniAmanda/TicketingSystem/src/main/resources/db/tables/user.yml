@@ -1,0 +1,59 @@
+#Added By Iruni
+
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Iruni
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    autoIncrement: true
+              - column:
+                  name: first_name
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: last_name
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: user_name
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: address
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: mobile_no
+                  type: VARCHAR(15)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: password
+                  type: VARCHAR(255) # For hashed passwords
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_type
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
